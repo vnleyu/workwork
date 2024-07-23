@@ -1,0 +1,26 @@
+---
+name: 'main'
+
+on:
+ push:
+   branches:
+     - main
+ workflow_dispatch:
+
+jobs:
+  target:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Say hello
+        run: echo "Hello World!"
+      - name: build docker
+        run: docker build -t
+      - name: run docker
+        run: docker run -d -p
+      - name: List docker containers
+        run: docker ps
+      - name: compose docker
+        run: docker-compose up -d
