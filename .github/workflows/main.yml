@@ -16,10 +16,10 @@ jobs:
           fetch-depth: 0
       - name: Say hello
         run: echo "Hello World!"
-      - name: build docker
-        run: docker build -t
+      - name: build docker 
+        run: docker build -t devops-seminar .
       - name: run docker
-        run: docker run -d -p
+        run: docker run -d -p 3000:80 devops-seminar
       - name: List docker containers
         run: docker ps
       - name: compose docker
